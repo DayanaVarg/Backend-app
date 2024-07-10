@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "558f3e97-a7c8-4805-a700-3fe54619cb62",
+		"name": "Backend App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31959677",
+		"_collection_link": "https://dark-station-678106.postman.co/workspace/New-Team-Workspace~ae858807-7f8b-4845-8d7c-904e4bb90d02/collection/31959677-558f3e97-a7c8-4805-a700-3fe54619cb62?action=share&source=collection_link&creator=31959677"
+	},
+	"item": [
+		{
+			"name": "addPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identification\": \"1013106777\",\r\n    \"name\": \"Deivi\",\r\n    \"lastname\": \"Herrera\",\r\n    \"email\": \"Deivi@g.com\",\r\n    \"phone\": \"304\",\r\n    \"dateBirth\": \"2005-11-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/people/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPersons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/people/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePerson",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identification\" : \"1013106777\",\r\n    \"dateBirth\": \"2006-11-01\", \r\n    \"email\" : \"Dayana@g.com\",\r\n    \"lastname\" : \"Dayana\",\r\n    \"name\" : \"Dayana\",\r\n    \"phone\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/people/1013106777",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"1013106777"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePerson",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/people/1013106777",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"1013106777"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
